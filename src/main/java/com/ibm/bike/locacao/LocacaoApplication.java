@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LocacaoApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Teste de commit");
+		System.out.println("Teste de commit 2");
 		SpringApplication.run(LocacaoApplication.class, args);
 	}
 
