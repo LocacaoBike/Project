@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import static junit.framework.TestCase.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
@@ -17,7 +19,7 @@ class LocacaoApplicationTests {
 	private BicycleService service;
 
 	@Test
-	public void testInserir(){
+	public void testInsert(){
 		Bicycle bike = new Bicycle();
 		bike.setModelo("Specialized");
 		bike.setCor("Branco");
@@ -37,6 +39,14 @@ class LocacaoApplicationTests {
 
 		service.delete(id);
 		assertFalse(service.getBikeById(id).isPresent());
+	}
+
+	@Test
+	public void testList(){
+
+		List<BicycleDTO> bike = service.getBike();
+		
+
 	}
 
 }
